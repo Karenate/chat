@@ -10,7 +10,7 @@ def read_file(filename):
 # 轉換檔案
 def convert(lines):
     new = []
-    person = None
+    person = None # 最理想的預設值
     for line in lines:
         if line == 'Allen':
             person = 'Allen'
@@ -22,7 +22,7 @@ def convert(lines):
             new.append(person + ': ' + line)
     return new
 
-# 轉換檔案
+# 寫入檔案
 def write_file(filename, lines):
     with open(filename, 'w') as f:
         for line in lines:
